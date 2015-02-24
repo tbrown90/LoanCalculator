@@ -1,0 +1,13 @@
+{
+  "name": "Loan Calculator",
+  "description": "Calculates loan payoffs, how long it will take to pay off a loan, etc.",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "*",
+    "angular-route": "*",
+    "jquery": "~2.1.1",
+    "ngReact": "~0.1.3",
+    "angular-ui-router": "~0.2.13",
+    "angular-resource": "~1.3.10"
+  }
+}

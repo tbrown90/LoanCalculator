@@ -1,0 +1,14 @@
+doctype html
+html#ng-app(ng-app="LoanCalculator")
+    head
+        title= title
+        link(rel='stylesheet', href='styles/style.css')
+    body
+        .content(ui-view)
+        script(src='scripts/vendor/angular/angular.js')
+        script(src='scripts/vendor/angular/angular-ui-router.js')
+        script(src='scripts/vendor/angular/angular-resource.js')
+        script(src='scripts/vendor/react/react.js')
+        script(src='scripts/vendor/react/ngReact.js')
+        script(src='scripts/core.js')
+        script(src='scripts/features.js')
