@@ -1,14 +1,23 @@
 doctype html
 html#ng-app(ng-app="LoanCalculator")
-    head
-        title= title
-        link(rel='stylesheet', href='styles/style.css')
-    body
-        .content(ui-view)
-        script(src='scripts/vendor/angular/angular.js')
-        script(src='scripts/vendor/angular/angular-ui-router.js')
-        script(src='scripts/vendor/angular/angular-resource.js')
-        script(src='scripts/vendor/react/react.js')
-        script(src='scripts/vendor/react/ngReact.js')
-        script(src='scripts/core.js')
-        script(src='scripts/features.js')
+	head
+		title= title
+		link(rel='stylesheet', href='styles/style.css')
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-57593200-1', 'auto');
+			ga('send', 'pageview');
+			ga('send', 'event', 'LoanCalculator', 'PageLoad', 'loancalculator.iamtjbrown.com');
+	  
+	body
+		.content(ui-view)
+		script(src='scripts/vendor/angular/angular.js')
+		script(src='scripts/vendor/angular/angular-ui-router.js')
+		script(src='scripts/vendor/angular/angular-resource.js')
+		script(src='scripts/vendor/react/react.js')
+		script(src='scripts/vendor/react/ngReact.js')
+		script(src='scripts/core.js')
+		script(src='scripts/features.js')
