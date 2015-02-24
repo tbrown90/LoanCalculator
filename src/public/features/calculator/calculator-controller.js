@@ -11,7 +11,7 @@ LoanCalculator.Controllers.controller('calculatorCtrl', ['$scope', 'CalculatorSe
         calculatorService.data = loanData;
         CalculatorService.save(calculatorService, function(data) {
             $scope.loan = data;
-            console.log($scope.loan);
+            ga('send', 'event', 'LoanCalculator', 'Calculate', data);
         });
     }
     
