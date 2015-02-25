@@ -9,33 +9,7 @@
         <input type="button" ng-click="calculate(loanData)" value="Calculate" />
     </div>
     
-    <div id="loan">
-        <div class="paper" ng-if="loan != undefined">
-            <br/>
-            A loan with a principal of {{loan.principal | currency}} at {{loan.apr | percentage}} APR and monthly payments of {{loan.payment | currency}}
-            will have {{loan.paymentSchedule.length}} monthly payments ({{loan.paymentSchedule.length / 12 | number:2}} years). {{loan.interest | currency}} will be paid in interest.<br/><br/>
-            <table>
-                <tr>
-                    <th><br/></th>
-                    <th>Payment</th>
-                    <th>Principal Paid</th>
-                    <th>Interest Paid</th>
-                    <th>Remaining Principal</th>
-                    <th>Remaining Interest</th>
-                    <th>Remaining Balance</th>
-                </tr>
-                <tr ng-repeat="payment in loan.paymentSchedule">
-                    <td>{{$index}}</td>
-                    <td>{{payment.totalPayment | currency}}</td>
-                    <td>{{payment.paidToPrincipal | currency}}</td>
-                    <td>{{payment.paidToInterest | currency}}</td>
-                    <td>{{payment.remainingPrincipal | currency}}</td>
-                    <td>{{payment.remainingInterest | currency}}</td>
-                    <td>{{payment.remainingValue | currency}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    <payment-schedule loan="loan"></payment-schedule>
 </div>
 
 
